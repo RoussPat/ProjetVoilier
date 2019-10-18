@@ -1,0 +1,4 @@
+
+
+void initRecepteurHF();
+void recevoirMessage();

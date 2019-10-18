@@ -1,0 +1,4 @@
+
+
+void initAccu ();
+void NotifierNiveauBatterie();
