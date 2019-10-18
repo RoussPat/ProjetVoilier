@@ -1,4 +1,4 @@
 
 
-void initEmeteur();
-void envoyerMessage(/*paylod*/);
+void InitEmeteur();
+void EnvoyerMessage(/*paylod*/);
