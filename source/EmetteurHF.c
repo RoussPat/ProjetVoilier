@@ -5,10 +5,10 @@
 // TX ENABLE -> PA11 de l'emeteur push pull 1 ou 0 allumé ou eteint
 // l'emeteur sera en connexion usart serie avec le STM32
 
-void InitEmeteur(){
+void InitEmeteur(void){
 
 	//enable de l'usart 1
-	RCC->APB1ENR |= RCC_APB1ENR_USART1EN;
+	RCC->APB2ENR |= RCC_APB2ENR_USART1EN ;
 	RCC->APB2ENR |= RCC_APB2ENR_IOPAEN ;
 	//Config de la pate PA9
 	GPIOA->CRH= GPIOA->CRH &~GPIO_CRH_CNF9_0;

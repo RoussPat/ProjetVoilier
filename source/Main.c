@@ -13,7 +13,11 @@
 
 
 int main (int argc, char * argv[]){
-
+	/* ----- TEST DE L'EMETTEUR HF -----
+	InitEmeteur();
+	EnvoyerMessage("test",4);
+	EnvoyerMessage("test",4);*/
+	while(1);
 }
 
 
