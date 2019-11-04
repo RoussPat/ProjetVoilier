@@ -153,9 +153,6 @@
           <Name>-U-O142 -O10446 -SF4000 -C0 -A0 -I0 -HNlocalhost -HP7184 -P2 -N00("ARM CoreSight SW-DP") -D00(1BA01477) -L00(0) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_128.FLM -FS08000000 -FL020000 -FP0($$Device:STM32F103RB$Flash\STM32F10x_128.FLM)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
-<<<<<<< HEAD
-      <Breakpoint/>
-=======
       <Breakpoint>
         <Bp>
           <Number>0</Number>
@@ -190,7 +187,6 @@
           <Expression></Expression>
         </Bp>
       </Breakpoint>
->>>>>>> 9f9bc9edbc013acba9722c8fa1115b466117b9a9
       <WatchWindow1>
         <Ww>
           <count>0</count>
@@ -387,9 +383,6 @@
           <Name>-U-O142 -O2254 -S0 -C0 -A0 -N00("ARM CoreSight SW-DP") -D00(1BA01477) -L00(0) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_128.FLM -FS08000000 -FL020000 -FP0($$Device:STM32F103RB$Flash\STM32F10x_128.FLM)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
-<<<<<<< HEAD
-      <Breakpoint/>
-=======
       <Breakpoint>
         <Bp>
           <Number>0</Number>
@@ -424,7 +417,6 @@
           <Expression></Expression>
         </Bp>
       </Breakpoint>
->>>>>>> 9f9bc9edbc013acba9722c8fa1115b466117b9a9
       <Tracepoint>
         <THDelay>0</THDelay>
       </Tracepoint>
@@ -518,7 +510,7 @@
       <GroupNumber>2</GroupNumber>
       <FileNumber>3</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\ProjetVoilier\source\CodeurIncremental.c</PathWithFileName>
@@ -566,7 +558,7 @@
       <GroupNumber>2</GroupNumber>
       <FileNumber>7</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\ProjetVoilier\source\RecepteurHF.c</PathWithFileName>
