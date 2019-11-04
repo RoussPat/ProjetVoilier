@@ -10,33 +10,6 @@
 #include "stm32f1xx_ll_rcc.h" // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_utils.h"   // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_system.h" // utile dans la fonction SystemClock_Config
-
-
-int main (int argc, char * argv[]){
-	/* ----- TEST DE L'EMETTEUR HF -----
-	InitEmeteur();
-	EnvoyerMessage("test",4);
-	EnvoyerMessage("test",4);*/
-	while(1);
-}
-
-
-
-/**
-  * @brief  System Clock Configuration
-  *         The system Clock is configured as follow :
-  *            System Clock source            = PLL (HSE)
-  *            SYSCLK(Hz)                     = 72000000
-  *            HCLK(Hz)                       = 72000000
-  *            AHB Prescaler                  = 1
-  *            APB1 Prescaler                 = 2
-  *            APB2 Prescaler                 = 1
-  *            HSE Frequency(Hz)              = 8000000
-  *            PLLMUL                         = 9
-  *            Flash Latency(WS)              = 2
-  * @param  None
-  * @retval None
-  */
 void SystemClock_Config(void)
 {
   /* Set FLASH latency */
@@ -77,6 +50,41 @@ void SystemClock_Config(void)
   LL_SetSystemCoreClock(72000000);
 }
 
+int main (int argc, char * argv[]){
+	SystemClock_Config();
+	/* ----- TEST DE L'EMETTEUR HF -----
+	InitEmeteur();
+	EnvoyerMessage("test",4);
+	EnvoyerMessage("test",4);*/
+	
+	/* ----- TEST DU RECEPTEUR HF -----*/
+	static int a=0;
+	InitRecepteurHF();
+	while(1){
+		a = GetCommande();
+		//printf("%d\n",a);
+	}
+}
+
+
+
+/**
+  * @brief  System Clock Configuration
+  *         The system Clock is configured as follow :
+  *            System Clock source            = PLL (HSE)
+  *            SYSCLK(Hz)                     = 72000000
+  *            HCLK(Hz)                       = 72000000
+  *            AHB Prescaler                  = 1
+  *            APB1 Prescaler                 = 2
+  *            APB2 Prescaler                 = 1
+  *            HSE Frequency(Hz)              = 8000000
+  *            PLLMUL                         = 9
+  *            Flash Latency(WS)              = 2
+  * @param  None
+  * @retval None
+  */
+
+
 
 
 /* ==============   BOARD SPECIFIC CONFIGURATION CODE END      ============== */
@@ -98,6 +106,7 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* Infinite loop */
   while (1)
   {
+		
   }
 }
 #endif
