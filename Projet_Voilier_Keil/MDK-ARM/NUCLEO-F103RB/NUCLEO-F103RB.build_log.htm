@@ -21,34 +21,35 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
 Dialog DLL:      TARMSTM.DLL V1.66.0.0
  
 <h2>Project:</h2>
-U:\Documents\TP-MicroControleur\BATO\ProjetVoilier\Projet_Voilier_Keil\MDK-ARM\Project.uvprojx
+U:\Documents\4IR\ProjetVoilier\Projet_Voilier_Keil\MDK-ARM\Project.uvprojx
 Project File Date:  10/18/2019
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild target 'Simulateur'
-compiling Accu7V2.c...
-..\..\..\ProjetVoilier\source\Accu7V2.h(3): warning:  #1295-D: Deprecated declaration initAccu - give arg types
-  void initAccu ();
-..\..\..\ProjetVoilier\source\Accu7V2.h(4): warning:  #1-D: last line of file ends without a newline
-  void NotifierNiveauBatterie();
-..\..\..\ProjetVoilier\source\Accu7V2.h(4): warning:  #1295-D: Deprecated declaration NotifierNiveauBatterie - give arg types
-  void NotifierNiveauBatterie();
-..\..\..\ProjetVoilier\source\Accu7V2.c: 3 warnings, 0 errors
-compiling RecepteurHF.c...
-..\..\..\ProjetVoilier\source\RecepteurHF.h(3): warning:  #1295-D: Deprecated declaration initRecepteurHF - give arg types
-  void initRecepteurHF();
-..\..\..\ProjetVoilier\source\RecepteurHF.h(4): warning:  #1-D: last line of file ends without a newline
-  void recevoirMessage();
-..\..\..\ProjetVoilier\source\RecepteurHF.h(4): warning:  #1295-D: Deprecated declaration recevoirMessage - give arg types
-  void recevoirMessage();
-..\..\..\ProjetVoilier\source\RecepteurHF.c: 3 warnings, 0 errors
+compiling Accelerometre.c...
+..\..\..\ProjetVoilier\source\Accelerometre.h(3): warning:  #1-D: last line of file ends without a newline
+  void initAccelerometre();
+..\..\..\ProjetVoilier\source\Accelerometre.h(3): warning:  #1295-D: Deprecated declaration initAccelerometre - give arg types
+  void initAccelerometre();
+..\..\..\ProjetVoilier\source\Accelerometre.c: 2 warnings, 0 errors
 compiling CodeurIncremental.c...
 ..\..\..\ProjetVoilier\source\CodeurIncremental.h(3): warning:  #1295-D: Deprecated declaration initCodeurIncremental - give arg types
   void initCodeurIncremental();
 ..\..\..\ProjetVoilier\source\CodeurIncremental.c(6): warning:  #1-D: last line of file ends without a newline
   //emma(l'index) sur PA5
 ..\..\..\ProjetVoilier\source\CodeurIncremental.c: 2 warnings, 0 errors
+compiling EmetteurHF.c...
+compiling Accu7V2.c...
+..\..\..\ProjetVoilier\source\Accu7V2.h(3): warning:  #1295-D: Deprecated declaration initAccu - give arg types
+  void initAccu ();
+..\..\..\ProjetVoilier\source\Accu7V2.h(4): warning:  #1-D: last line of file ends without a newline
+  int getNiveauBatterie(int ch);
+..\..\..\ProjetVoilier\source\Accu7V2.c(22): warning:  #940-D: missing return statement at end of non-void function "getNiveauBatterie" 
+  }
+..\..\..\ProjetVoilier\source\Accu7V2.c(28): warning:  #1-D: last line of file ends without a newline
+  // ADC_SR -->
+..\..\..\ProjetVoilier\source\Accu7V2.c: 4 warnings, 0 errors
 compiling MoteurCC.c...
 ..\..\..\ProjetVoilier\source\MoteurCC.h(3): warning:  #1295-D: Deprecated declaration initMoteurCC - give arg types
   void initMoteurCC();
@@ -59,12 +60,36 @@ compiling MoteurCC.c...
 ..\..\..\ProjetVoilier\source\MoteurCC.c(4): warning:  #1-D: last line of file ends without a newline
   //sens en pushpull sur PA2
 ..\..\..\ProjetVoilier\source\MoteurCC.c: 4 warnings, 0 errors
-compiling Accelerometre.c...
+compiling Main.c...
 ..\..\..\ProjetVoilier\source\Accelerometre.h(3): warning:  #1-D: last line of file ends without a newline
   void initAccelerometre();
 ..\..\..\ProjetVoilier\source\Accelerometre.h(3): warning:  #1295-D: Deprecated declaration initAccelerometre - give arg types
   void initAccelerometre();
-..\..\..\ProjetVoilier\source\Accelerometre.c: 2 warnings, 0 errors
+..\..\..\ProjetVoilier\source\Accu7V2.h(3): warning:  #1295-D: Deprecated declaration initAccu - give arg types
+  void initAccu ();
+..\..\..\ProjetVoilier\source\Accu7V2.h(4): warning:  #1-D: last line of file ends without a newline
+  int getNiveauBatterie(int ch);
+..\..\..\ProjetVoilier\source\CodeurIncremental.h(3): warning:  #1295-D: Deprecated declaration initCodeurIncremental - give arg types
+  void initCodeurIncremental();
+..\..\..\ProjetVoilier\source\MoteurCC.h(3): warning:  #1295-D: Deprecated declaration initMoteurCC - give arg types
+  void initMoteurCC();
+..\..\..\ProjetVoilier\source\MoteurCC.h(4): warning:  #1-D: last line of file ends without a newline
+  void tournerPlateau(/*sens,vitesse*/);
+..\..\..\ProjetVoilier\source\MoteurCC.h(4): warning:  #1295-D: Deprecated declaration tournerPlateau - give arg types
+  void tournerPlateau(/*sens,vitesse*/);
+..\..\..\ProjetVoilier\source\RecepteurHF.h(3): warning:  #1295-D: Deprecated declaration InitRecepteurHF - give arg types
+  void InitRecepteurHF();
+..\..\..\ProjetVoilier\source\RecepteurHF.h(4): warning:  #1-D: last line of file ends without a newline
+  void RecevoirMessage();
+..\..\..\ProjetVoilier\source\RecepteurHF.h(4): warning:  #1295-D: Deprecated declaration RecevoirMessage - give arg types
+  void RecevoirMessage();
+..\..\..\ProjetVoilier\source\ServoMoteur.h(3): warning:  #1295-D: Deprecated declaration initServoMoteur - give arg types
+  void initServoMoteur();
+..\..\..\ProjetVoilier\source\ServoMoteur.h(4): warning:  #1-D: last line of file ends without a newline
+  void SetAngle(/*ange*/);
+..\..\..\ProjetVoilier\source\ServoMoteur.h(4): warning:  #1295-D: Deprecated declaration SetAngle - give arg types
+  void SetAngle(/*ange*/);
+..\..\..\ProjetVoilier\source\Main.c: 14 warnings, 0 errors
 compiling ServoMoteur.c...
 ..\..\..\ProjetVoilier\source\ServoMoteur.h(3): warning:  #1295-D: Deprecated declaration initServoMoteur - give arg types
   void initServoMoteur();
@@ -75,50 +100,27 @@ compiling ServoMoteur.c...
 ..\..\..\ProjetVoilier\source\ServoMoteur.c(5): warning:  #1-D: last line of file ends without a newline
   //PA8 et PB8 + choix de la clock par cavalier
 ..\..\..\ProjetVoilier\source\ServoMoteur.c: 4 warnings, 0 errors
-compiling EmetteurHF.c...
-compiling Main.c...
-..\..\..\ProjetVoilier\source\Accelerometre.h(3): warning:  #1-D: last line of file ends without a newline
-  void initAccelerometre();
-..\..\..\ProjetVoilier\source\Accelerometre.h(3): warning:  #1295-D: Deprecated declaration initAccelerometre - give arg types
-  void initAccelerometre();
-..\..\..\ProjetVoilier\source\Accu7V2.h(3): warning:  #1295-D: Deprecated declaration initAccu - give arg types
-  void initAccu ();
-..\..\..\ProjetVoilier\source\Accu7V2.h(4): warning:  #1-D: last line of file ends without a newline
-  void NotifierNiveauBatterie();
-..\..\..\ProjetVoilier\source\Accu7V2.h(4): warning:  #1295-D: Deprecated declaration NotifierNiveauBatterie - give arg types
-  void NotifierNiveauBatterie();
-..\..\..\ProjetVoilier\source\CodeurIncremental.h(3): warning:  #1295-D: Deprecated declaration initCodeurIncremental - give arg types
-  void initCodeurIncremental();
-..\..\..\ProjetVoilier\source\MoteurCC.h(3): warning:  #1295-D: Deprecated declaration initMoteurCC - give arg types
-  void initMoteurCC();
-..\..\..\ProjetVoilier\source\MoteurCC.h(4): warning:  #1-D: last line of file ends without a newline
-  void tournerPlateau(/*sens,vitesse*/);
-..\..\..\ProjetVoilier\source\MoteurCC.h(4): warning:  #1295-D: Deprecated declaration tournerPlateau - give arg types
-  void tournerPlateau(/*sens,vitesse*/);
-..\..\..\ProjetVoilier\source\RecepteurHF.h(3): warning:  #1295-D: Deprecated declaration initRecepteurHF - give arg types
-  void initRecepteurHF();
+compiling RecepteurHF.c...
+..\..\..\ProjetVoilier\source\RecepteurHF.h(3): warning:  #1295-D: Deprecated declaration InitRecepteurHF - give arg types
+  void InitRecepteurHF();
 ..\..\..\ProjetVoilier\source\RecepteurHF.h(4): warning:  #1-D: last line of file ends without a newline
-  void recevoirMessage();
-..\..\..\ProjetVoilier\source\RecepteurHF.h(4): warning:  #1295-D: Deprecated declaration recevoirMessage - give arg types
-  void recevoirMessage();
-..\..\..\ProjetVoilier\source\ServoMoteur.h(3): warning:  #1295-D: Deprecated declaration initServoMoteur - give arg types
-  void initServoMoteur();
-..\..\..\ProjetVoilier\source\ServoMoteur.h(4): warning:  #1-D: last line of file ends without a newline
-  void SetAngle(/*ange*/);
-..\..\..\ProjetVoilier\source\ServoMoteur.h(4): warning:  #1295-D: Deprecated declaration SetAngle - give arg types
-  void SetAngle(/*ange*/);
-..\..\..\ProjetVoilier\source\Main.c: 15 warnings, 0 errors
+  void RecevoirMessage();
+..\..\..\ProjetVoilier\source\RecepteurHF.h(4): warning:  #1295-D: Deprecated declaration RecevoirMessage - give arg types
+  void RecevoirMessage();
+..\..\..\ProjetVoilier\source\RecepteurHF.c(18): warning:  #1-D: last line of file ends without a newline
+  }
+..\..\..\ProjetVoilier\source\RecepteurHF.c: 4 warnings, 0 errors
 compiling stm32f1xx_ll_rcc.c...
-compiling stm32f1xx_ll_gpio.c...
 compiling stm32f1xx_ll_utils.c...
-compiling stm32f1xx_ll_usart.c...
 compiling stm32f1xx_ll_tim.c...
+compiling stm32f1xx_ll_gpio.c...
+compiling stm32f1xx_ll_usart.c...
 assembling startup_stm32f103xb.s...
 compiling stm32f1xx_ll_adc.c...
 compiling system_stm32f1xx.c...
 linking...
-Program Size: Code=1356 RO-data=276 RW-data=0 ZI-data=1024  
-"NUCLEO-F103RB\NUCLEO-F103RB.axf" - 0 Error(s), 33 Warning(s).
+Program Size: Code=216 RO-data=252 RW-data=0 ZI-data=1024  
+"NUCLEO-F103RB\NUCLEO-F103RB.axf" - 0 Error(s), 34 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -141,7 +143,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.1.1
-Build Time Elapsed:  00:00:06
+Build Time Elapsed:  00:00:12
 </pre>
 </body>
 </html>
