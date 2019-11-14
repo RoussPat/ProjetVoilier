@@ -1,4 +1,4 @@
 
 
 void initMoteurCC();
-void tournerPlateau(/*sens,vitesse*/);
+void tournerPlateau(short int vitesse, short int sens);

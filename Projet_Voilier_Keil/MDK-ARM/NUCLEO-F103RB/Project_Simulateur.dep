@@ -1,4 +1,5 @@
 Dependencies for Project 'Project', Target 'Simulateur': (DO NOT MODIFY !)
+<<<<<<< HEAD
 F (..\..\..\ProjetVoilier\source\Accelerometre.c)(0x5DA9725E)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\LLDrivers\inc -I ..\Services -I ..\MyDrivers --C99-I.\RTE\_Simulateur-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DSTM32F103xB -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000U" -DUSE_FULL_ASSERT-o nucleo-f103rb\accelerometre.o --omf_browse nucleo-f103rb\accelerometre.crf --depend nucleo-f103rb\accelerometre.d)
 I (..\..\..\ProjetVoilier\source\Accelerometre.h)(0x5DA9725E)
 F (..\..\..\ProjetVoilier\source\Accu7V2.c)(0x5DA9725E)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\LLDrivers\inc -I ..\Services -I ..\MyDrivers --C99-I.\RTE\_Simulateur-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DSTM32F103xB -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000U" -DUSE_FULL_ASSERT-o nucleo-f103rb\accu7v2.o --omf_browse nucleo-f103rb\accu7v2.crf --depend nucleo-f103rb\accu7v2.d)
@@ -10,11 +11,21 @@ I (..\..\..\ProjetVoilier\source\EmetteurHF.h)(0x5DA97907)
 I (..\LLDrivers\inc\stm32f1xx_ll_usart.h)(0x5DA9725C)
 I (..\Inc\stm32f1xx.h)(0x5DA9725C)
 I (..\Inc\stm32f103xb.h)(0x5DA9725C)
+=======
+F (..\..\..\ProjetVoilier\source\Accelerometre.c)(0x5DA969EB)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\LLDrivers\inc -I ..\Services -I ..\MyDrivers --C99-I.\RTE\_Simulateur-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DSTM32F103xB -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000U" -DUSE_FULL_ASSERT-o nucleo-f103rb\accelerometre.o --omf_browse nucleo-f103rb\accelerometre.crf --depend nucleo-f103rb\accelerometre.d)
+I (..\..\..\ProjetVoilier\source\Accelerometre.h)(0x5DA969EB)
+F (..\..\..\ProjetVoilier\source\Accu7V2.c)(0x5DC00EBF)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\LLDrivers\inc -I ..\Services -I ..\MyDrivers --C99-I.\RTE\_Simulateur-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DSTM32F103xB -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000U" -DUSE_FULL_ASSERT-o nucleo-f103rb\accu7v2.o --omf_browse nucleo-f103rb\accu7v2.crf --depend nucleo-f103rb\accu7v2.d)
+I (..\..\..\ProjetVoilier\source\Accu7V2.h)(0x5DC00EBF)
+F (..\..\..\ProjetVoilier\source\CodeurIncremental.c)(0x5DC02F32)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\LLDrivers\inc -I ..\Services -I ..\MyDrivers --C99-I.\RTE\_Simulateur-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DSTM32F103xB -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000U" -DUSE_FULL_ASSERT-o nucleo-f103rb\codeurincremental.o --omf_browse nucleo-f103rb\codeurincremental.crf --depend nucleo-f103rb\codeurincremental.d)
+I (..\..\..\ProjetVoilier\source\CodeurIncremental.h)(0x5DC02E08)
+I (..\Inc\stm32f103xb.h)(0x5D1623CA)
+>>>>>>> 4cae3f07253134700aa53140afe9b06e86a2d1d9
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\core_cm3.h)(0x5A8E7442)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F218E)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_version.h)(0x5A55EA42)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_compiler.h)(0x5A8E7442)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_armcc.h)(0x5A8E7442)
+<<<<<<< HEAD
 I (..\Inc\system_stm32f1xx.h)(0x5DA9725C)
 F (..\..\..\ProjetVoilier\source\Main.c)(0x5DC01F9E)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\LLDrivers\inc -I ..\Services -I ..\MyDrivers --C99-I.\RTE\_Simulateur-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DSTM32F103xB -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000U" -DUSE_FULL_ASSERT-o nucleo-f103rb\main.o --omf_browse nucleo-f103rb\main.crf --depend nucleo-f103rb\main.d)
 I (..\..\..\ProjetVoilier\source\Accelerometre.h)(0x5DA9725E)
@@ -24,6 +35,30 @@ I (..\..\..\ProjetVoilier\source\EmetteurHF.h)(0x5DA97907)
 I (..\..\..\ProjetVoilier\source\MoteurCC.h)(0x5DA9725F)
 I (..\..\..\ProjetVoilier\source\RecepteurHF.h)(0x5DBFE470)
 I (..\..\..\ProjetVoilier\source\ServoMoteur.h)(0x5DA9725F)
+=======
+I (..\Inc\system_stm32f1xx.h)(0x5D1623CA)
+I (..\LLDrivers\inc\stm32f1xx_ll_gpio.h)(0x5D10A06A)
+I (..\Inc\stm32f1xx.h)(0x5D1623CA)
+F (..\..\..\ProjetVoilier\source\EmetteurHF.c)(0x5DA97C27)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\LLDrivers\inc -I ..\Services -I ..\MyDrivers --C99-I.\RTE\_Simulateur-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DSTM32F103xB -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000U" -DUSE_FULL_ASSERT-o nucleo-f103rb\emetteurhf.o --omf_browse nucleo-f103rb\emetteurhf.crf --depend nucleo-f103rb\emetteurhf.d)
+I (..\..\..\ProjetVoilier\source\EmetteurHF.h)(0x5DA97C27)
+I (..\LLDrivers\inc\stm32f1xx_ll_usart.h)(0x5D10A083)
+I (..\Inc\stm32f1xx.h)(0x5D1623CA)
+I (..\Inc\stm32f103xb.h)(0x5D1623CA)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\core_cm3.h)(0x5A8E7442)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F218E)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_version.h)(0x5A55EA42)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_compiler.h)(0x5A8E7442)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_armcc.h)(0x5A8E7442)
+I (..\Inc\system_stm32f1xx.h)(0x5D1623CA)
+F (..\..\..\ProjetVoilier\source\Main.c)(0x5DA97C27)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\LLDrivers\inc -I ..\Services -I ..\MyDrivers --C99-I.\RTE\_Simulateur-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DSTM32F103xB -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000U" -DUSE_FULL_ASSERT-o nucleo-f103rb\main.o --omf_browse nucleo-f103rb\main.crf --depend nucleo-f103rb\main.d)
+I (..\..\..\ProjetVoilier\source\Accelerometre.h)(0x5DA969EB)
+I (..\..\..\ProjetVoilier\source\Accu7V2.h)(0x5DC00EBF)
+I (..\..\..\ProjetVoilier\source\CodeurIncremental.h)(0x5DC02E08)
+I (..\..\..\ProjetVoilier\source\EmetteurHF.h)(0x5DA97C27)
+I (..\..\..\ProjetVoilier\source\MoteurCC.h)(0x5DA969EB)
+I (..\..\..\ProjetVoilier\source\RecepteurHF.h)(0x5DA97B0C)
+I (..\..\..\ProjetVoilier\source\ServoMoteur.h)(0x5DA969EB)
+>>>>>>> 4cae3f07253134700aa53140afe9b06e86a2d1d9
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599F218C)
 I (..\LLDrivers\inc\stm32f1xx_ll_rcc.h)(0x5DA9725C)
 I (..\Inc\stm32f1xx.h)(0x5DA9725C)
@@ -33,6 +68,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F218E)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_version.h)(0x5A55EA42)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_compiler.h)(0x5A8E7442)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_armcc.h)(0x5A8E7442)
+<<<<<<< HEAD
 I (..\Inc\system_stm32f1xx.h)(0x5DA9725C)
 I (..\LLDrivers\inc\stm32f1xx_ll_utils.h)(0x5DA9725C)
 I (..\LLDrivers\inc\stm32f1xx_ll_system.h)(0x5DA9725C)
@@ -43,6 +79,18 @@ I (..\..\..\ProjetVoilier\source\RecepteurHF.h)(0x5DBFE470)
 I (..\LLDrivers\inc\stm32f1xx_ll_usart.h)(0x5DA9725C)
 I (..\Inc\stm32f1xx.h)(0x5DA9725C)
 I (..\Inc\stm32f103xb.h)(0x5DA9725C)
+=======
+I (..\Inc\system_stm32f1xx.h)(0x5D1623CA)
+I (..\LLDrivers\inc\stm32f1xx_ll_utils.h)(0x5D10A087)
+I (..\LLDrivers\inc\stm32f1xx_ll_system.h)(0x5D10A068)
+F (..\..\..\ProjetVoilier\source\MoteurCC.c)(0x5DA969EB)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\LLDrivers\inc -I ..\Services -I ..\MyDrivers --C99-I.\RTE\_Simulateur-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DSTM32F103xB -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000U" -DUSE_FULL_ASSERT-o nucleo-f103rb\moteurcc.o --omf_browse nucleo-f103rb\moteurcc.crf --depend nucleo-f103rb\moteurcc.d)
+I (..\..\..\ProjetVoilier\source\MoteurCC.h)(0x5DA969EB)
+F (..\..\..\ProjetVoilier\source\RecepteurHF.c)(0x5DC0121D)(-c --cpu Cortex-M3 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Inc -I ..\LLDrivers\inc -I ..\Services -I ..\MyDrivers --C99-I.\RTE\_Simulateur-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F10X_MD -DSTM32F103xB -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000U" -DUSE_FULL_ASSERT-o nucleo-f103rb\recepteurhf.o --omf_browse nucleo-f103rb\recepteurhf.crf --depend nucleo-f103rb\recepteurhf.d)
+I (..\..\..\ProjetVoilier\source\RecepteurHF.h)(0x5DA97B0C)
+I (..\LLDrivers\inc\stm32f1xx_ll_usart.h)(0x5D10A083)
+I (..\Inc\stm32f1xx.h)(0x5D1623CA)
+I (..\Inc\stm32f103xb.h)(0x5D1623CA)
+>>>>>>> 4cae3f07253134700aa53140afe9b06e86a2d1d9
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\core_cm3.h)(0x5A8E7442)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F218E)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_version.h)(0x5A55EA42)

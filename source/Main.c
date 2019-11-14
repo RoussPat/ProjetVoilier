@@ -18,7 +18,7 @@ void SystemClock_Config(void)
   /* Enable HSE oscillator */
 	// ********* Commenter la ligne ci-dessous pour MCBSTM32 *****************
 	// ********* Conserver la ligne si Nucléo*********************************
-  LL_RCC_HSE_EnableBypass();
+  //LL_RCC_HSE_EnableBypass();
   LL_RCC_HSE_Enable();
   while(LL_RCC_HSE_IsReady() != 1)
   {
@@ -57,13 +57,22 @@ int main (int argc, char * argv[]){
 	EnvoyerMessage("test",4);
 	EnvoyerMessage("test",4);*/
 	
-	/* ----- TEST DU RECEPTEUR HF -----*/
+	/* ----- TEST DU RECEPTEUR HF ----- */
 	static int a=0;
 	InitRecepteurHF();
 	while(1){
 		a = GetCommande();
 		//printf("%d\n",a);
 	}
+	
+	
+	/* ----- TEST DU MOTEURCC ----- 
+	initMoteurCC();
+	tournerPlateau(80, 1);
+	
+	while(1);
+	*/
+
 }
 
 
