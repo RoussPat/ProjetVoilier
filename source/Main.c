@@ -11,13 +11,22 @@
 #include "stm32f1xx_ll_utils.h"   // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_system.h" // utile dans la fonction SystemClock_Config
 
+void SystemClock_Config(void);
 
 int main (int argc, char * argv[]){
+
+
+	SystemClock_Config();
 	/* ----- TEST DE L'EMETTEUR HF -----
 	InitEmeteur();
 	EnvoyerMessage("test",4);
 	EnvoyerMessage("test",4);*/
-	while(1);
+	initCodeurIncremental();
+	waitInitGirouette();
+	static int c;
+	while(1) {
+		c =getAngle();
+	};
 }
 
 
@@ -45,7 +54,7 @@ void SystemClock_Config(void)
   /* Enable HSE oscillator */
 	// ********* Commenter la ligne ci-dessous pour MCBSTM32 *****************
 	// ********* Conserver la ligne si Nucléo*********************************
-  LL_RCC_HSE_EnableBypass();
+  //LL_RCC_HSE_EnableBypass();
   LL_RCC_HSE_Enable();
   while(LL_RCC_HSE_IsReady() != 1)
   {
