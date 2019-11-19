@@ -16,6 +16,7 @@ void SystemClock_Config(void);
 
 int main (int argc, char * argv[]){
 	SystemClock_Config();
+	
 	/* ----- TEST DE L'EMETTEUR HF -----
 	InitEmeteur();
 	EnvoyerMessage("test",4);

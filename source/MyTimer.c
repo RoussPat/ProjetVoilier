@@ -8,21 +8,29 @@
 
 // fonction Handler 
 void SysTick_Handler(void) {
-	//Angle
-		if (getAngle() != 0) {
-			SetAngle(getAngle()/2);
-		}
-		else { //face au vent -> fermer les voilesSetAngle
-			SetAngle(0);
-			//option : enoyer message
-		}
-		//MoteurCC
-		int a = GetCommande();
-		if(a>0) {
-			tournerPlateau(a*(100/85), 1);
-		}else {
-			tournerPlateau(a*(-100/85), 0);
-		}
+	
+	//--------------ANGLE------------
+	int angle = getAngle()/2; //angle entre 0 et 360
+	// on ramène l'angle entre 0 et 180 (par rapport à la proue du voilier)
+	if (angle >180) {
+		angle = 360 - angle;
+	}
+	//on traite les deux cas : fonction affine (angle entre 45 et 90) ou renvoie 0 sinon (trop face au vent)
+	if (angle >= 45) {
+		SetAngle(angle/2);
+	}
+	else {
+		SetAngle(0);
+		//option : envoyer message (face au vent)
+	}
+	
+	//------------MOTEUR CC--------------
+	int a = GetCommande();
+	if(a>0) {
+		tournerPlateau(a*(100/85), 1);
+	}else {
+		tournerPlateau(a*(-100/85), 0);
+	}
 }
 
 void MyTimerConf() {
@@ -46,5 +54,4 @@ void MyTimerConf() {
 // fonction affine getAngle(alpha) -> return Angle_Teta
 // alpha = 180 -> Teta = 90
 // alpha = 90  -> Teta = 45
-// alpha = 0   -> On ferme les voiles
-// DONC : f(alpha)= alpha/2=teta SAUF pour alpha=0
+// DONC : f(alpha)= alpha/2=teta pour alpha entre 45 et 180
