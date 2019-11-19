@@ -19,34 +19,44 @@ int main (int argc, char * argv[]){
 	/* ----- TEST DE L'EMETTEUR HF -----
 	InitEmeteur();
 	EnvoyerMessage("test",4);
-	EnvoyerMessage("test",4);*/
+	EnvoyerMessage("test",4);
+	*/
 	
-	/* ----- TEST DU RECEPTEUR HF ----- */
+	/* ----- TEST DU RECEPTEUR HF -----
 	static int a=0;
 	InitRecepteurHF();
-	/*while(1){
+	while(1){
 		a = GetCommande();
 		//printf("%d\n",a);
-	}*/
-	
+	}
+	*/
 	
 	/* ----- TEST DU MOTEURCC ----- 
 	initMoteurCC();
-	tournerPlateau(80, 1);
-	
-	while(1);
-	*/
+	InitRecepteurHF();
+	int a=0;
+	while(1){
+		a = GetCommande();
+		if(a>0) {
+			tournerPlateau(a*(100/85), 1);
+		}else {
+			tournerPlateau(a*(-100/85), 0);
+		}
+	}
+*/
 
-	// ------ CONFIGURATION -----
+	/* ------ CONFIGURATION ----- */
+	initMoteurCC();
+	InitRecepteurHF();
 	InitRecepteurHF();
 	initMoteurCC();
 	initCodeurIncremental();
 	//waitInitGirouette();
 	MyTimerConf();
 	
-	// ----- ANGLES DES VOILES -----
+	// ----- ANGLES DES VOILES + MoteurCC -----
 	while(1) {
-		//interruption de SysTick -> SetAngle toutes les 500ms
+		//interruption de SysTick -> toutes les 500ms
 	}
 
 }

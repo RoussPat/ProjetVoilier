@@ -1,17 +1,27 @@
 #include "MyTimer.h"
 #include "ServoMoteur.h"
+#include "MoteurCC.h"
+#include "RecepteurHF.h"
 #include "CodeurIncremental.h"
 #include "stm32f1xx_ll_tim.h" 
 	
 
 // fonction Handler 
 void SysTick_Handler(void) {
+	//Angle
 		if (getAngle() != 0) {
 			SetAngle(getAngle()/2);
 		}
 		else { //face au vent -> fermer les voilesSetAngle
 			SetAngle(0);
 			//option : enoyer message
+		}
+		//MoteurCC
+		int a = GetCommande();
+		if(a>0) {
+			tournerPlateau(a*(100/85), 1);
+		}else {
+			tournerPlateau(a*(-100/85), 0);
 		}
 }
 
