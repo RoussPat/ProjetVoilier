@@ -52,5 +52,5 @@ void InitRecepteurHF() {
 	
 	
 int GetCommande() {
-	return (TIM4->CCR2 - 382);
+	return (TIM4->CCR2 - 401);
 }

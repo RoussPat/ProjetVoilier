@@ -20,27 +20,35 @@ int main (int argc, char * argv[]){
 	EnvoyerMessage("test",4);
 	EnvoyerMessage("test",4);*/
 	
-	/* ----- TEST DU RECEPTEUR HF ----- */
+	/* ----- TEST DU RECEPTEUR HF -----
 	static int a=0;
 	InitRecepteurHF();
 	while(1){
 		a = GetCommande();
 		//printf("%d\n",a);
 	}
+	*/
 	
 	
 	/* ----- TEST DU MOTEURCC ----- 
 	initMoteurCC();
-	tournerPlateau(80, 1);
-	
-	while(1);
-	*/
+	InitRecepteurHF();
+	int a=0;
+	while(1){
+		a = GetCommande();
+		if(a>0) {
+			tournerPlateau(a*(100/85), 1);
+		}else {
+			tournerPlateau(a*(-100/85), 0);
+		}
+	}
+		*/
 
-	// ------ CONFIGURATION -----
+	/* ------ CONFIGURATION -----
 	InitRecepteurHF();
 	initMoteurCC();
 	initCodeurIncremental();
-	waitInitGirouette();
+	waitInitGirouette();*/
 	
 	// ----- ANGLES DES VOILES -----
 	// DOC CORTEX PAGE 151
@@ -54,7 +62,7 @@ int main (int argc, char * argv[]){
 		void SysTick_QHandler(void) {
 			SetAngle(getAngle()/2);
 		}
-	*/
+	
 	while(1) {
 		if (getAngle() != 0) {
 			SetAngle(getAngle()/2); // Utilisation de SysTick et f° d'interruption
@@ -63,7 +71,7 @@ int main (int argc, char * argv[]){
 			SetAngle(0);
 			//option : enoyer message
 		}
-	}
+	}*/
 // La fonction affine pour la variable angle de SetAngle : 
 // fonction affine getAngle(alpha) -> return Angle_Teta
 // alpha = 180 -> Teta = 90
