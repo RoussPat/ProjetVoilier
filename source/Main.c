@@ -43,6 +43,10 @@ int main (int argc, char * argv[]){
 		}
 	}
 		*/
+		/* ----- TEST DU SERVO MOTEUR ------ */
+	initServoMoteur();
+	setAngle(0);
+	while(1);
 
 	/* ------ CONFIGURATION -----
 	InitRecepteurHF();

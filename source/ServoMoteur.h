@@ -1,4 +1,4 @@
 
 
 void initServoMoteur();
-void SetAngle(/*ange*/);
+void setAngle(short int angle);
