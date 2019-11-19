@@ -6,6 +6,7 @@
 #include "RecepteurHF.h"
 #include "ServoMoteur.h"
 #include <stdio.h>
+#include "MyTimer.h"
 
 #include "stm32f1xx_ll_rcc.h" // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_utils.h"   // utile dans la fonction SystemClock_Config
@@ -23,10 +24,10 @@ int main (int argc, char * argv[]){
 	/* ----- TEST DU RECEPTEUR HF ----- */
 	static int a=0;
 	InitRecepteurHF();
-	while(1){
+	/*while(1){
 		a = GetCommande();
 		//printf("%d\n",a);
-	}
+	}*/
 	
 	
 	/* ----- TEST DU MOTEURCC ----- 
@@ -40,36 +41,13 @@ int main (int argc, char * argv[]){
 	InitRecepteurHF();
 	initMoteurCC();
 	initCodeurIncremental();
-	waitInitGirouette();
+	//waitInitGirouette();
+	MyTimerConf();
 	
 	// ----- ANGLES DES VOILES -----
-	// DOC CORTEX PAGE 151
-	// faire nouveau fichier myTimer 
-	/* fonction MyTimerConf :
-		~ comme RCC->APB2ENR |= RCC_APB1ENR_TIM4EN;
-		Timer->ARR = ???;
-		Timer->PSC = ???;
-	*/
-	/* fonction Handler :
-		void SysTick_QHandler(void) {
-			SetAngle(getAngle()/2);
-		}
-	*/
 	while(1) {
-		if (getAngle() != 0) {
-			SetAngle(getAngle()/2); // Utilisation de SysTick et f° d'interruption
-		}
-		else { //face au vent -> fermer les voilesSetAngle
-			SetAngle(0);
-			//option : enoyer message
-		}
+		//interruption de SysTick -> SetAngle toutes les 500ms
 	}
-// La fonction affine pour la variable angle de SetAngle : 
-// fonction affine getAngle(alpha) -> return Angle_Teta
-// alpha = 180 -> Teta = 90
-// alpha = 90  -> Teta = 45
-// alpha = 0   -> On ferme les voiles
-// DONC : f(alpha)= alpha/2=teta SAUF pour alpha=0
 
 }
 
