@@ -13,53 +13,9 @@
 
 void SystemClock_Config(void);
 
-int main (int argc, char * argv[]){
 
 
-	SystemClock_Config();
-	/* ----- TEST DE L'EMETTEUR HF -----
-	InitEmeteur();
-	EnvoyerMessage("test",4);
-	EnvoyerMessage("test",4);*/
-	
-	// ------ CONFIGURATION -----
-	InitRecepteurHF();
-	initMoteurCC();
-	initCodeurIncremental();
-	waitInitGirouette();
-	
-	// ----- ANGLES DES VOILES -----
-	// DOC CORTEX PAGE 151
-	// faire nouveau fichier myTimer 
-	/* fonction MyTimerConf :
-		~ comme RCC->APB2ENR |= RCC_APB1ENR_TIM4EN;
-		Timer->ARR = ???;
-		Timer->PSC = ???;
-	*/
-	/* fonction Handler :
-		void SysTick_QHandler(void) {
-			SetAngle(getAngle()/2);
-		}
-	*/
-	while(1) {
-		if (getAngle() != 0) {
-			SetAngle(getAngle()/2); // Utilisation de SysTick et f° d'interruption
-		}
-		else { //face au vent -> fermer les voilesSetAngle
-			SetAngle(0);
-			//option : enoyer message
-		}
-	}
-}
-
-// La fonction affine pour la variable angle de SetAngle : 
-// fonction affine getAngle(alpha) -> return Angle_Teta
-// alpha = 180 -> Teta = 90
-// alpha = 90  -> Teta = 45
-// alpha = 0   -> On ferme les voiles
-// DONC : f(alpha)= alpha/2=teta SAUF pour alpha=0
-
-
+=======
 
 /**
   * @brief  System Clock Configuration
@@ -116,6 +72,85 @@ void SystemClock_Config(void)
   LL_SetSystemCoreClock(72000000);
 }
 
+int main (int argc, char * argv[]){
+	SystemClock_Config();
+	/* ----- TEST DE L'EMETTEUR HF -----
+	InitEmeteur();
+	EnvoyerMessage("test",4);
+	EnvoyerMessage("test",4);*/
+	
+	/* ----- TEST DU RECEPTEUR HF ----- */
+	static int a=0;
+	InitRecepteurHF();
+	while(1){
+		a = GetCommande();
+		//printf("%d\n",a);
+	}
+	
+	
+	/* ----- TEST DU MOTEURCC ----- 
+	initMoteurCC();
+	tournerPlateau(80, 1);
+	
+	while(1);
+	*/
+
+	// ------ CONFIGURATION -----
+	InitRecepteurHF();
+	initMoteurCC();
+	initCodeurIncremental();
+	waitInitGirouette();
+	
+	// ----- ANGLES DES VOILES -----
+	// DOC CORTEX PAGE 151
+	// faire nouveau fichier myTimer 
+	/* fonction MyTimerConf :
+		~ comme RCC->APB2ENR |= RCC_APB1ENR_TIM4EN;
+		Timer->ARR = ???;
+		Timer->PSC = ???;
+	*/
+	/* fonction Handler :
+		void SysTick_QHandler(void) {
+			SetAngle(getAngle()/2);
+		}
+	*/
+	while(1) {
+		if (getAngle() != 0) {
+			SetAngle(getAngle()/2); // Utilisation de SysTick et f° d'interruption
+		}
+		else { //face au vent -> fermer les voilesSetAngle
+			SetAngle(0);
+			//option : enoyer message
+		}
+	}
+// La fonction affine pour la variable angle de SetAngle : 
+// fonction affine getAngle(alpha) -> return Angle_Teta
+// alpha = 180 -> Teta = 90
+// alpha = 90  -> Teta = 45
+// alpha = 0   -> On ferme les voiles
+// DONC : f(alpha)= alpha/2=teta SAUF pour alpha=0
+
+}
+
+
+
+/**
+  * @brief  System Clock Configuration
+  *         The system Clock is configured as follow :
+  *            System Clock source            = PLL (HSE)
+  *            SYSCLK(Hz)                     = 72000000
+  *            HCLK(Hz)                       = 72000000
+  *            AHB Prescaler                  = 1
+  *            APB1 Prescaler                 = 2
+  *            APB2 Prescaler                 = 1
+  *            HSE Frequency(Hz)              = 8000000
+  *            PLLMUL                         = 9
+  *            Flash Latency(WS)              = 2
+  * @param  None
+  * @retval None
+  */
+
+
 
 
 /* ==============   BOARD SPECIFIC CONFIGURATION CODE END      ============== */
@@ -137,6 +172,7 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* Infinite loop */
   while (1)
   {
+		
   }
 }
 #endif
