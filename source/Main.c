@@ -21,13 +21,43 @@ int main (int argc, char * argv[]){
 	InitEmeteur();
 	EnvoyerMessage("test",4);
 	EnvoyerMessage("test",4);*/
+	
+	// ------ CONFIGURATION -----
+	InitRecepteurHF();
+	initMoteurCC();
 	initCodeurIncremental();
 	waitInitGirouette();
-	static int c;
+	
+	// ----- ANGLES DES VOILES -----
+	// DOC CORTEX PAGE 151
+	// faire nouveau fichier myTimer 
+	/* fonction MyTimerConf :
+		~ comme RCC->APB2ENR |= RCC_APB1ENR_TIM4EN;
+		Timer->ARR = ???;
+		Timer->PSC = ???;
+	*/
+	/* fonction Handler :
+		void SysTick_QHandler(void) {
+			SetAngle(getAngle()/2);
+		}
+	*/
 	while(1) {
-		c =getAngle();
-	};
+		if (getAngle() != 0) {
+			SetAngle(getAngle()/2); // Utilisation de SysTick et f° d'interruption
+		}
+		else { //face au vent -> fermer les voilesSetAngle
+			SetAngle(0);
+			//option : enoyer message
+		}
+	}
 }
+
+// La fonction affine pour la variable angle de SetAngle : 
+// fonction affine getAngle(alpha) -> return Angle_Teta
+// alpha = 180 -> Teta = 90
+// alpha = 90  -> Teta = 45
+// alpha = 0   -> On ferme les voiles
+// DONC : f(alpha)= alpha/2=teta SAUF pour alpha=0
 
 
 
