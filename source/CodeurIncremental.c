@@ -12,7 +12,7 @@
 
 void initCodeurIncremental(){
 	//RCC enable GPIOA et TIM3
-	RCC->APB1ENR=RCC_APB1ENR_TIM3EN;
+	RCC->APB1ENR|=RCC_APB1ENR_TIM3EN;
 	RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
 	
 	//configuration des broches PA6 et PA7 -- en floating input

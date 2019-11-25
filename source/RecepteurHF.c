@@ -47,10 +47,11 @@ void InitRecepteurHF() {
 	GPIOB->CRL= GPIOB->CRL &~ GPIO_CRL_MODE6_1;
 	
 	//DEMARRE CLOCK
-	LL_TIM_EnableCounter(TIM4);
+	LL_TIM_EnableCounter(TIM4); // MET UN POINT D'ARRET ICI POUR VOIR LE TIM4 ENABLED PUIS DISABLED APRES CE POINT
+	//TIM4->CR1 |= TIM_CR1_CEN;
 }
 	
 	
 int GetCommande() {
-	return (TIM4->CCR2 - 401);
+	return (TIM4->CCR2 - 384);
 }
