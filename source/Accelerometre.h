@@ -1,3 +1,3 @@
 
 
-void initAccelerometre();
+void initAccelerometre(void);

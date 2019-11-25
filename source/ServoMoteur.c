@@ -41,3 +41,4 @@ void initServoMoteur () {
 void setAngle(short int angle){
 	TIM1->CCR1 = 0x0C00 + ((0x1240-0x0C00)*((float)angle/90.0))	;//facteur de la resolution de la pwm de  0 ->2400 -> 4800
 }
+

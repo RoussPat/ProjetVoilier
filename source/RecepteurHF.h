@@ -1,4 +1,4 @@
 
 
-void InitRecepteurHF();
-int GetCommande();
+void InitRecepteurHF(void);
+int GetCommande(void);

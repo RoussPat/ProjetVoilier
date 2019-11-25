@@ -1,5 +1,5 @@
 
 
-void waitInitGirouette();
-void initCodeurIncremental();
-int getAngle();
+void waitInitGirouette(void);
+void initCodeurIncremental(void);
+int getAngle(void);

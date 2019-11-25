@@ -2,3 +2,6 @@
 
 // ADC sur PC2 % a la batterie restante
 
+void initAccu (void) {};
+void NotifierNiveauBatterie(void){};
+	

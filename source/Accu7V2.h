@@ -1,4 +1,4 @@
 
 
-void initAccu ();
-void NotifierNiveauBatterie();
+void initAccu (void);
+void NotifierNiveauBatterie(void);

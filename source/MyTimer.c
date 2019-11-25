@@ -11,7 +11,7 @@ void SysTick_Handler(void) {
 	
 	//--------------ANGLE------------
 	static int angle;
-	angle	= (getAngle()); //angle entre 0 et 360
+	angle	= getAngle(); //angle entre 0 et 360
 	// on ramène l'angle entre 0 et 180 (par rapport à la proue du voilier)
 	if (angle >180) {
 		angle = 360 - angle;
@@ -22,7 +22,6 @@ void SysTick_Handler(void) {
 	}
 	else {
 		setAngle(0);
-		//option : envoyer message (face au vent)
 	}
 	
 	//------------MOTEUR CC--------------
@@ -49,10 +48,3 @@ void MyTimerConf() {
 	//enable == lancer
 	SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
 }
-
-	
-// La fonction affine pour la variable angle de SetAngle : 
-// fonction affine getAngle(alpha) -> return Angle_Teta
-// alpha = 180 -> Teta = 90
-// alpha = 90  -> Teta = 45
-// DONC : f(alpha)= alpha/2=teta pour alpha entre 45 et 180
