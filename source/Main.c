@@ -58,8 +58,6 @@ int main (int argc, char * argv[]){
 	initServoMoteur();
 	waitInitGirouette();
 	MyTimerConf();
-	// POUR LA PROCHAINE FOIS LE TIM4 EST DISABLED (JE COMPREND PAS)
-	// ----- ANGLES DES VOILES + MoteurCC -----
 	while(1) {
 		//interruption de SysTick -> toutes les 500ms
 	}
